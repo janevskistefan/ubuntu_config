@@ -10,7 +10,7 @@ git clone https://github.com/AdnanHodzic/auto-cpufreq.git &&
 cd auto-cpufreq && 
 sudo ./auto-cpufreq-installer && 
 sudo auto-cpufreq --install && 
-sudo cp auto-cpufreq.conf /etc/auto-cpufreq.conf
+sudo ln -s auto-cpufreq.conf /etc/auto-cpufreq.conf
 ```
 
 # tlp
@@ -19,7 +19,7 @@ sudo cp auto-cpufreq.conf /etc/auto-cpufreq.conf
 sudo add-apt-repository ppa:linrunner/tlp &&
 sudo apt update &&
 sudo apt install tlp &&
-sudo cp tlp.conf /etc/tlp.d/swift3_personal.conf
+sudo ln -s $HOME/Documents/GitHub/ubuntu_config/power_management/tlp.conf /etc/tlp.d/
 ```
 # s2idle -> s2deep
 
