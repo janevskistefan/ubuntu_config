@@ -1,0 +1,27 @@
+version: "2.1"
+services:
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - /home/stef/.jellyfin:/config 
+      - /home/stef/Videos/TV-Series:/data/tvshows
+      - /home/stef/Videos/Movies:/data/movies
+      - /home/stef/Music:/data/music
+    devices:
+      - /dev/dri/renderD128:/dev/dri/renderD128
+      - /dev/dri/card0:/dev/dri/card0
+    group_add:
+      # cat /etc/groups | grep render
+      - "108"
+    ports:
+      # sudo ufw allow 8096/tcp - a must for connecting from other devices
+      - 8096:8096
+      - 8920:8920
+      - 7359:7359/udp
+      - 1900:1900/udp
+    restart: unless-stopped
