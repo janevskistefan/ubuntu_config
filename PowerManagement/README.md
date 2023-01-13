@@ -21,3 +21,6 @@ sudo apt update &&
 sudo apt install tlp &&
 sudo cp tlp.conf /etc/tlp.d/swift3_personal.conf
 ```
+# s2idle -> deep
+
+https://devnull.land/laptop-s2idle-to-deep
