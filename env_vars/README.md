@@ -7,5 +7,5 @@ It is simple to set environment variables that affect your whole session. Plasma
 ```
 - Creating a symbolic (soft) link to the required location that points to `path.sh`:
 ```
-ln -s $HOME/Documents/GitHub/ubuntu_config/env_vars/path.sh $HOME/.config/plasma-workspace/env/
+ln -s $(pwd)/path.sh $HOME/.config/plasma-workspace/env/
 ```
